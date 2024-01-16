@@ -38,6 +38,26 @@ namespace GestionNominasV1
                 _nombre = value;
             }
         }
+         public string ApellidosEmpleado
+        {
+            get
+            {
+                //Control de contenido
+                if (string.IsNullOrEmpty(_nombre)) throw new Exception("Apellidos del trabajador no establecido");
+
+                //Devolucion del valor 
+                return _nombre;
+            }
+            set 
+            {
+                //Validaciion de los datos a establecer 
+                if (string.IsNullOrEmpty(value)) throw new Exception("Los apellidos del trabajador no puede ser null o cadena vacia");
+
+                //Establecimiento del valor al miembro privado 
+                _nombre = value;
+            }
+        }
+     
 
 
     }
